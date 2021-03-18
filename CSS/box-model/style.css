@@ -1,11 +1,29 @@
-div {
+#first, #second, #third, #fourth {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+#first {
   background-color: aquamarine;
-  width: 20%;
-  font-size: 42px;
-  font-weight: 200;
-  border: solid black;
-  padding: 30px 10px 10px 0;
-  /* padding: top right bottom left; */
-  text-align: center;
-  margin: auto;
+  top: 0;
+  left: 0;
+}
+
+#second {
+  background-color: rgb(13, 78, 11);
+  top: 0;
+  right: 0;
+}
+
+#third {
+  background-color: rgb(226, 223, 17);
+  bottom: 0;
+  left: 0;
+}
+
+#fourth {
+  background-color: rgb(226, 101, 17);
+  bottom: 0;
+  right: 0;
 }
