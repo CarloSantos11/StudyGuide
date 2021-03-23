@@ -1,0 +1,21 @@
+.box {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+.box1 {
+    background-color: red;
+    color: white; 
+}
+.box2 {
+    background-color: green;
+    color: white; 
+}    
+.box3 {
+    background-color: orange;
+    color: white; 
+}  
+.box4 {
+    background-color: yellow;
+    color: white; 
+}       
