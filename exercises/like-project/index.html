@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Likes/Dislikes</title>
+  </head>
+  <body>
+    <section id="article">
+        <img id="articlePhoto" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGljdHVyZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
+      
+        <section id="left" class="ratings">
+        <button>
+          <img
+            id="up"
+            src="images/green_thumb_icon.png"
+            alt="Thumbs Up icon"
+            onclick="countLikes()"
+          />
+        </button>
+        <p id="likes">0</p>
+        <p>Likes</p>
+      </section>
+
+      <section id="right" class="ratings">
+        <button>
+          <img
+            id="down"
+            src="images/red_thumb_icon.png "
+            alt="Thumbs Down icon"
+            onclick="countDislikes()"
+          />
+        </button>
+        <p id="dislikes">0</p>
+        <p>Dislikes</p>
+      </section>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

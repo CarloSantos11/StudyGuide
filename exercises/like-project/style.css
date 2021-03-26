@@ -1,0 +1,55 @@
+
+#article {
+    margin: 120px auto 0;
+    height: 600px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#articlePhoto {
+    width: 80%;
+    margin-top: 40px;
+}
+
+.ratings section {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.ratings img {
+    width: 50px;
+    display: inline;
+    position: relative;
+    border: none;
+}
+
+.ratings button {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    display: inline;
+    position: relative;
+}
+
+p { 
+    display: inline;
+}
+
+#left{
+    float: left;
+    padding: 30px;
+    margin: 30px;
+}
+
+#right {
+    float: right;
+    padding: 30px;
+    margin: 30px;
+}
+
+
