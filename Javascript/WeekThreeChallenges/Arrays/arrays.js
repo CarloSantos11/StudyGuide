@@ -1,0 +1,1 @@
+let = firstArray = ["Hello", "World", "My", "Name", "Is"];
