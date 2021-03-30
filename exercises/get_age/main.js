@@ -7,7 +7,7 @@
 //     console.log(d.getFullYear() - birthYear);
 // }
 
-let getAge = (birthYear) =>
+let getAge = birthYear =>
     console.log(new Date().getFullYear() - birthYear);
 
-getAge(1975);
+getAge(1987);
