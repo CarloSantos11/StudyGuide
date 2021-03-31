@@ -36,6 +36,10 @@ button img {
   z-index: 9;
 }
 
+button:focus {
+  outline: none;
+}
+
 #leftSide {
   height: 400px;
   background-color: green;

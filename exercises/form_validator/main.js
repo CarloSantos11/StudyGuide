@@ -16,29 +16,39 @@ function showSuccess(input) {
     formControl.className = "form-control success";
 }
 
-function isValidEmail(email) {
+function isValidEmail(input) {
     const regularExpression = (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value));
-    return regularExpression.test(String(email).toLowerCase());
+    if (regularExpression.test(input.value)) {
+    showSuccess(input);
+} else {
+    showError(input, `${getFieldName(input)} not a valid email`)
 }
 
 function checkRequired(inputArr) {
     inputArr.forEach(function(input) {
         if (input.value.trim() === "") {
-            showError(input, `${getFieldName(input)}is required`); 
+            showError(input, `${getFieldName(input)} is required`); 
         } else {
             showSuccess(input);
         }
     });
 }
 
-function checkLength (input, min, max) {
+function checkLength(input, min, max) {
     if(input.value.length < min) {
-        showError(
-            input,
-        `'${getFieldName(input)} is required`);
+        showError(input, `${getFieldName(input)} is too short`);
+    } else if (input.value.length > max) {
+        showError(input, `${getFieldName(input)} has too many characters`);
     } else {
-        
+        showSuccess(input);
     }
+}
+
+function checkPasswordsMatch(password, password2) {
+    if (password.value !== password2.value) {
+        showError(input, `${getFieldName(password2)} does not match`);
+    } else {
+        showSuccess(password2);
     }
 }
 
@@ -81,4 +91,8 @@ function getFieldName(input) {
         error.preventDefault();
 
         checkRequired ([username, email, password, password2]);
+        checkPasswordsMatch(password, password2);
+        checkLength(password, 5, 15);
+        isValidEmail(email);
+
     })
