@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "item": "hamburger",
+        "price": "$4.59"
+    },
+    {
+        "id": 2,
+        "item": "fries",
+        "price": "$2.29"
+    },
+    {
+        "id": 3,
+        "item": "medium drink",
+        "price": "$1.00"
+    },
+    {
+        "id": 4,
+        "item": "strawberry shake",
+        "price": "$3.29"
+    }
+]
