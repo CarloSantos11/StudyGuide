@@ -29,4 +29,3 @@ while (bottleCount > 0) {
   } 
 }
   console.log("No more" + phrase + "on the wall");
-   

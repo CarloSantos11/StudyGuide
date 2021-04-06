@@ -19,3 +19,18 @@ function nameFive(name) {
 }
 
 nameFive("me");
+function printName(name, times) {
+  let counter = 0;
+  while (counter < times) {
+    console.log(name);
+    counter++;
+  }
+}
+
+printName("Cammie", 4)
+
+
+function functionName(params) {
+  console.log("repeatable code")
+}
+
