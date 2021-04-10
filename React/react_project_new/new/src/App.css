@@ -1,0 +1,19 @@
+.box {
+  height: 250px;
+  width: 250px;
+  background-color: green;
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 15px;
+  padding: 20px;
+}
+
+button {
+  position: absolute;
+  right: 20px;
+}

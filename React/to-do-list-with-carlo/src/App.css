@@ -1,0 +1,15 @@
+
+
+.myFirstBox {
+  height: 200px;
+  background-color: red;
+  margin: 0 auto;
+  width: 200px;
+  padding: 20px;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 20px;
+}
