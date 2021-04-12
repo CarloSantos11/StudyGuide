@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+}
+.box {
+  height: 250px;
+  width: 250px;
+  background-color: rgb(51, 6, 65);
+  border: 10px solid black;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+button {
+  position: absolute;
+  right: 15px;
+  bottom: 50px;
+}
