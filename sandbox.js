@@ -157,20 +157,70 @@
 // We want to take the evaluated value and push it into our array of tips
 
 
-const bills = [125, 555, 44];
-const tips = [];
-const total = [];
+// const bills = [125, 555, 44];
+// const tips = [];
+// const total = [];
 
-for(let i = 0; i < bills.length; i++) {
-  tips[i] = tipCalc(bills[i])
-  total[i] = tips[i] + bills[i];
+// for(let i = 0; i < bills.length; i++) {
+//   tips[i] = tipCalc(bills[i])
+//   total[i] = tips[i] + bills[i];
+// }
+
+// console.log(tips)
+// console.log(total)
+
+// function tipCalc(bill) {
+//   const tip = (bill > 50 && bill < 300) ? (bill * 0.15) : (bill * 0.20);
+//   // console.log(tip, tip + bill)
+//   return tip;
+// }
+
+
+// // Running an array of years through a function that cacluates an age 
+// // based on the current year
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// }
+
+// const years = [1998, 1967, 2002, 2010, 2018];
+// const age = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   age[i] = calcAge(years[i]);
+// }
+
+
+let myFirstCar = {
+  make: "BMW",
+  model: "Z3",
+  year: "1960",
+  color: "blue",
+  mileage: 999999990,
+  started: true,
+  fuel: 2,
+  addFuel: function(amount) {
+    this.fuel += amount;
+  },
+  drive: function() {
+    if(this.started) {
+      console.log("Wee were driving")
+    } else {
+      console.log("the car must be started")
+    }
+  },
+  start: function () {
+    if (this.fuel == 0) {
+      console.log("go fill up first");
+      this.addFuel(2);
+      this.fuel -= 1;
+      console.log("just added fuel try again");
+    } else {
+      console.log("vroom vroom");
+      this.fuel -= 1;
+      console.log(`This much fuel left ${this.fuel}`)
+    }
+  }
 }
 
-console.log(tips)
-console.log(total)
 
-function tipCalc(bill) {
-  const tip = (bill > 50 && bill < 300) ? (bill * 0.15) : (bill * 0.20);
-  // console.log(tip, tip + bill)
-  return tip;
-}
+myFirstCar.start();

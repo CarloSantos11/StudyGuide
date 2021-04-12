@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
     {
         "id": 1,
         "item": "hamburger",
@@ -19,4 +20,31 @@
         "item": "strawberry shake",
         "price": "$3.29"
     }
+=======
+  {
+    "id": 1, 
+    "name": "Cami",
+    "role": "Software Developer"
+  },
+  {
+    "id": 2,
+    "name": "Jaycie",
+    "role": "Software Architect"
+  },
+  {
+    "id": 3,
+    "name": "Warren",
+    "role": "Project"
+  },
+  {
+    "id": 4,
+    "name": "Steve",
+    "role": "UX Designer"
+  },
+  {
+    "id": 5,
+    "name": "Carlo",
+    "role": "Apprentice"
+  }
+>>>>>>> main
 ]
