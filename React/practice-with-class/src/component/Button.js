@@ -1,11 +1,10 @@
-const Button = (props) => {
+import React from 'react'
 
-  function myAlert() {
-    alert(props.alertMessage);
-  }
-
+const Button = () => {
   return (
-      <button onClick={myAlert}>{props.message}</button>
+    <button>
+      Submit
+    </button>
   )
 }
 

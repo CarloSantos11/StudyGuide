@@ -1,22 +1,17 @@
 .App {
-  display: flex;
-}
-.box {
-  height: 250px;
-  width: 250px;
-  background-color: rgb(51, 6, 65);
-  border: 10px solid black;
-  margin: 0 auto;
   text-align: center;
-  position: relative;
 }
 
-h1 {
-  font-size: 16px;
+.header {
+  background-color: aquamarine;
+  width: 30%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 button {
-  position: absolute;
-  right: 15px;
-  bottom: 50px;
+  height: 30px;
+  width: 60px;
 }

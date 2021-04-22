@@ -1,26 +1,35 @@
 import './App.css';
-import Box from './component/Box'
-import Button from './component/Button'
+import Header from './component/Header'
+import ToDoList from './component/ToDoList'
+import { useState } from 'react'
 
 function App() {
+  const [toDoList, setToDoList] = useState(
+    [
+      {
+        id: 1,
+        toDoItem: "Make Breakfast",
+        dueDate: "4/17/21",
+        complete: false
+      },
+      {
+        id: 2,
+        toDoItem: "Study for 3 hours",
+        dueDate: "daily",
+        complete: false
+      },
+      {
+        id: 3,
+        toDoItem: "Go to the gym",
+        dueDate: "daily",
+        complete: false
+      },
+    ]
+  )
   return (
     <div className="App">
-      <Box 
-        heading="Our Main Box" 
-        message="More info"
-        popUpMessage="This is The main info section"
-      />
-      <Box 
-        heading="This Box will Conain information about users" 
-        message="User info"
-        popUpMessage="This is The User info section"
-      />
-      <Box 
-        heading="This box will have information about classes" 
-        message="Classes info"
-        popUpMessage="This is The User info section"
-      />
-      <Button />
+      <Header/>
+      <ToDoList toDoList={toDoList}/>
     </div>
   );
 }
