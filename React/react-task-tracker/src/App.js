@@ -1,11 +1,10 @@
-import Header from './component/Header'
-import Tasks from './component/Tasks'
+import "./App.css"
+import ToDoList from "./component/ToDoList"
 
 function App() {
   return (
-    <div className="container">
-      <Header title="Task Tracker" subtitle="Get Things Done"/>
-      <Tasks/>
+    <div className="App">
+      <ToDoList />
     </div>
   );
 }

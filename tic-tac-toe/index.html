@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>TIC-TAC-TOE</title>
+</head>
+<body>
+    <section class="container">
+        <section class="row">
+            <section id="intro" class="col-12">
+                <h1>TIC-TAC-TOE</h1>
+                <div id="form" style="opacity: 100">
+                    <label for="gamePiece">Would you like to be X's or O's?:</label>
+                    <input type="text" id="gamePiece" name="gamePiece" onkeyup="playersChoice()">
+                </div>
+            </section>
+        </section>
+        <section class="row">
+            <section id="one" onclick="chooseSquare('.one')" class="col-4">
+                <p class="one"></p>
+            </section>
+            <section id="two" onclick="chooseSquare('.two')" class="col-4">
+                <p class="two"></p>
+            </section>
+            <section id="three" onclick="chooseSquare('.three')" class="col-4">
+                <p class="three"></p>
+            </section>
+        </section>
+        <section class="row">
+            <section id="four" onclick="chooseSquare('.four')" class="col-4">
+                <p class="four"></p>
+            </section>
+            <section id="five" onclick="chooseSquare('.five')" class="col-4">
+                <p class="five"></p>
+            </section>
+            <section id="six" onclick="chooseSquare('.six')" class="col-4">
+                <p class="six"></p>
+            </section>
+        </section>
+        <section class="row">
+            <section id="seven" onclick="chooseSquare('.seven')" class="col-4">
+                <p class="seven"></p>
+            </section>
+            <section id="eight" onclick="chooseSquare('.eight')" class="col-4">
+                <p class="eight"></p>
+            </section>
+            <section id="nine" onclick="chooseSquare('.nine')" class="col-4">
+                <p class="nine"></p>
+            </section>
+        </section>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

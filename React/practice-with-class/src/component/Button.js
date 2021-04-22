@@ -1,12 +1,11 @@
-const Button = (props) => {
+import React from 'react'
 
-  function myAlert() {
-    alert(props.alertMessage);
-  }
-
-  return (
-      <button onClick={myAlert}>{props.message}</button>
-  )
+const Button = () => {
+    return (
+        <>
+            <button>Add</button>  
+        </>
+    )
 }
 
 export default Button
