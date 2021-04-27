@@ -7,7 +7,11 @@ const Header = ({title, onAdd, showAdd}) => {
     <>
       <header className="header">
         <h1>{title}</h1>   
-        <Button color="#071a07" text={showAdd ? "Close" : "Add"} onAdd={onAdd}/>    
+        <Button 
+          color={showAdd ? "red" : "#071a07"}
+          text={showAdd ? "Close" : "Add"} 
+          onAdd={onAdd}
+        />    
       </header>
     </>
   )
