@@ -13,7 +13,7 @@ let playersGamePiece;
 let compGamePiece;
 let currentMove;
 let number;
-let winningCombos = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
+let winningCombos = [["one", "two", "three"], ["four", "five", "six"], ["seven", "eight", "nine"], ["one", "four", "seven"], ["two", "five", "eight"], ["three", "six", "nine"], ["one", "five", "nine"], ["three", "five", "seven"]];
 let playersPicks = [];
 let compPicks = [];
 
@@ -32,7 +32,7 @@ function playersChoice() {
     } else {
         alert("Please enter an X or an O");
         playersGamePiece = "";
-        return ;
+        return;
         // console.log(playersGamePiece);
         }
     document.getElementById("form").innerHTML = "Please choose a square";
@@ -42,17 +42,17 @@ function playersChoice() {
 
 // Allowing player to choose squares
 function chooseSquare(className) {
-// Keep track of turn and alternate between turns and update the innerHTML to reflect move
+// Keep track of turn, alternate between turns and update the innerHTML to reflect move
     let square = document.querySelector(className);    
     square.innerHTML = currentMove;
     number = square.className;
     
     console.log(currentMove);
-    console.log(square.className);
+    console.log(number);
     
-
     if (currentMove == playersGamePiece) {
         playersPicks.push(number);
+        ;
         currentMove = compGamePiece;
         console.log(playersPicks);
  
@@ -61,10 +61,27 @@ function chooseSquare(className) {
         compPicks.push(number);
         console.log(compPicks);
      }
-     determineWinner();
+        determineWinner();
  }
 
+ function determineWinner() {
+     if (playersPicks.length >= 3 || compPicks.length >= 3) {
+         for (let i=0; i < winningCombos.length; i++) {
+             for(let n=0; n < winningCombos.length; n++)
 
+        console.log(winningCombos[i][n]);
+        if (playerPicks == winningCombos[i]) {
+            alert("You won");
+        } else if (compPicks == winningCombos[i]) {
+            alert("You lost");
+        } else {
+            alert ("Nobody wins");
+        }
+    }
+}
+
+         }
+     
 
 // function divsInArray( divs ) {
 //     let divArray = [];
