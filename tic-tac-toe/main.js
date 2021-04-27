@@ -3,7 +3,8 @@
 // - After player chooses store the variable for player1 and hide the input field.
 // - Allow players to choose a square /div
 // - Show either an X or an O in the square based on the player that chose it.
-// - Allow players to take turns (go from o's to x's or vice versa
+// - Once a square is picked it should no longer accept another value.
+// - Allow players to take turns (go from o's to x's or vice versa)
 // - When one player gets 3 in a row (diagonally, horiz, or vertically) - end the game and declare the winner.
 // - Show a "Play Again?" button and clear the board when clicked.
 
@@ -12,19 +13,28 @@ let playersGamePiece;
 let compGamePiece;
 let currentMove;
 let number;
+let winningCombos = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
+let playersPicks = [];
+let compPicks = [];
+
 
 
 // Getting player's choice
 function playersChoice() {
     playersGamePiece = document.querySelector("input").value.toUpperCase();
-    if (playersGamePiece !== "O" && playersGamePiece !== "X") {
-        alert("Please enter an X or an O");
-    }
+    // if (playersGamePiece !== "O" && playersGamePiece !== "X") {
+    //     alert("Please enter an X or an O");
+    //     playersGamePiece = "";
     if (playersGamePiece === "O") {
         compGamePiece = "X";
-    } else {     
+    } else if (playersGamePiece === "X") {     
         compGamePiece = "O";
-    }
+    } else {
+        alert("Please enter an X or an O");
+        playersGamePiece = "";
+        return ;
+        // console.log(playersGamePiece);
+        }
     document.getElementById("form").innerHTML = "Please choose a square";
     currentMove = playersGamePiece;
 }
@@ -36,26 +46,24 @@ function chooseSquare(className) {
     let square = document.querySelector(className);    
     square.innerHTML = currentMove;
     number = square.className;
+    
     console.log(currentMove);
     console.log(square.className);
-    console.log(number.innerHTML);
+    
+
     if (currentMove == playersGamePiece) {
+        playersPicks.push(number);
         currentMove = compGamePiece;
+        console.log(playersPicks);
+ 
     } else { 
         currentMove = playersGamePiece;
-    }
-    determineWinner();
-}
+        compPicks.push(number);
+        console.log(compPicks);
+     }
+     determineWinner();
+ }
 
-// If player or computer has 3 squares in a row end game and alert who is the winner.
- function determineWinner() {
-    // Keep track of what player has what square and determine if one of the players has 3 in a row.
-   if (number == 1 && number.innerHTML == playersGamePiece ) {
-       alert("you win");
-   } else {
-       alert('you lost');
-   }
-// 
 
 
 // function divsInArray( divs ) {
