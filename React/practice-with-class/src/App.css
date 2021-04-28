@@ -3,6 +3,7 @@
 }
 
 .header {
+<<<<<<< HEAD
   background-color: green;
   width: 40%;
   margin: auto;
@@ -25,4 +26,17 @@ button {
 
 button:hover {
   background-color: red;
+=======
+  background-color: aquamarine;
+  width: 30%;
+  margin: auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  height: 30px;
+  width: 60px;
+>>>>>>> main
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react'
 import ToDoItem from './ToDoItem'
 
@@ -20,4 +21,11 @@ const ToDoList = ({toDoList}) => toDoList.map((task) => <ToDoItem taskItem={task
 //     )
 // }
 
+=======
+import React from 'react'
+import ToDoItem from './ToDoItem'
+
+const ToDoList = ({toDoList}) => toDoList.map((task) => <ToDoItem taskItem={task}/>)
+
+>>>>>>> main
 export default ToDoList
