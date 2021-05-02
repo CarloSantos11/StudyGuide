@@ -22,73 +22,70 @@ let winningCombos = [
   ["one", "five", "nine"],
   ["three", "five", "seven"],
 ];
+
 let playersPicks = [];
 let compPicks = [];
 
-// Getting player's choice
+// Getting player's choice - "X" or "O"
 function playersChoice() {
   playersGamePiece = document.querySelector("input").value.toUpperCase();
-  // if (playersGamePiece !== "O" && playersGamePiece !== "X") {
-  //     alert("Please enter an X or an O");
-  //     playersGamePiece = "";
   if (playersGamePiece === "O") {
     compGamePiece = "X";
   } else if (playersGamePiece === "X") {
     compGamePiece = "O";
   } else {
     alert("Please enter an X or an O");
+    document.querySelector("input").value = "";
     playersGamePiece = "";
     return;
-    // console.log(playersGamePiece);
   }
-  document.getElementById("form").innerHTML = "Please choose a square";
+  document.getElementById("form").innerHTML= '<h3>Please choose a square</h3>';
+  // Player chooses first - current move is assigned to player's game piece
   currentMove = playersGamePiece;
 }
 
 // Allowing player to choose squares
 function chooseSquare(className) {
-  // Keep track of turn, alternate between turns and update the innerHTML to reflect move
+  // Keeping track of turns, alternate between turns and update the innerHTML to reflect move
   let square = document.querySelector(className);
   square.innerHTML = currentMove;
   number = square.className;
-
-  console.log(currentMove);
-  console.log(number);
-
+  // Logging what squares the player has picked and what squares the computer's picked and toggling whose turn it is
   if (currentMove == playersGamePiece) {
     playersPicks.push(number);
     currentMove = compGamePiece;
-    // console.log(playersPicks);
   } else {
     currentMove = playersGamePiece;
     compPicks.push(number);
   }
-  determineWinner();
+  return determineWinner();
 }
 
-// function sortPicks(pickedSquares) {
-//   pickedSquares.sort(function (a, b) {
-//     return a - b;
-//   });
-// }
-
 function determineWinner() {
+  // Start checking for winner once player or computer chooses 3 squares
   if (playersPicks.length >= 3 || compPicks.length >= 3) {
     for (let i = 0; i < winningCombos.length; i++) {
-    //   for (let n = 0; n < winningCombos.length; n++) {
-        console.log(winningCombos[i]);
-        console.log(playersPicks.sort());
-        playersPicks = playersPicks.sort();
-        console.log(`Here: ${playersPicks}`);
-      }
+      // Sorting the arrays
+      playersPicks = playersPicks.sort();
+      compPicks = compPicks.sort();
+      winningCombos[i] = winningCombos[i].sort();
+      // Determining if player wins or loses
+      console.log(winningCombos[i]);
+      console.log(playersPicks);
+
+      // check to see if all nine squares have been clicked and assign it to a variable
+      // join compPicks & playerPicks arrays together and then check the new arrays length by 9
+      let totalSquaresPicked = playersPicks.concat(compPicks);
+      console.log(totalSquaresPicked.length);
 
       if (playersPicks == winningCombos[i]) {
         alert("You won");
       } else if (compPicks == winningCombos[i]) {
         alert("You lost");
-      } else if (allSquaresPicked) {
-        alert("Nobody wins");
+      } else if (totalSquaresPicked.length === 9) {
+        alert("It's a draw.");
       }
+      return;
     }
   }
-// }
+}
