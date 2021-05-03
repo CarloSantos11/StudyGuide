@@ -53,6 +53,7 @@ function chooseSquare(className) {
   // Logging what squares the player has picked and what squares the computer's picked and toggling whose turn it is
   if (currentMove == playersGamePiece) {
     playersPicks.push(number);
+    console.log(playersPicks);
     currentMove = compGamePiece;
   } else {
     currentMove = playersGamePiece;
@@ -64,11 +65,11 @@ function chooseSquare(className) {
 function determineWinner() {
   // Start checking for winner once player or computer chooses 3 squares
   if (playersPicks.length >= 3 || compPicks.length >= 3) {
+    playersPicks = playersPicks.sort();
+    compPicks = compPicks.sort();
     for (let i = 0; i < winningCombos.length; i++) {
-      // Sorting the arrays
-      playersPicks = playersPicks.sort();
-      compPicks = compPicks.sort();
-      winningCombos[i] = winningCombos[i].sort();
+      // Sorting the arrays  playersPicks = playersPicks.sort();
+      winningCombos[i] = winningCombos.sort();
       // Determining if player wins or loses
       console.log(winningCombos[i]);
       console.log(playersPicks);
