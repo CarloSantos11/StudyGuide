@@ -1,16 +1,16 @@
 {
   "tasks": [
     {
-      "text": "erter",
-      "day": "ert",
+      "text": "learn this stuff",
+      "day": "ASAP",
       "reminder": true,
-      "id": 6
+      "id": 8
     },
     {
-      "text": "sdiouwer",
-      "day": "oauoe",
+      "text": "cobblin tiem",
+      "day": "sundey",
       "reminder": true,
-      "id": 7
+      "id": 9
     }
   ]
 }
